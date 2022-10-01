@@ -1,0 +1,10 @@
+.nav-button {
+  background-color: #f6f6f6;
+  transition: 0.2s ease all;
+}
+
+.nav-button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
