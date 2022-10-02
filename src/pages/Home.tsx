@@ -24,7 +24,11 @@ const Home = () => {
           { title: "Moon Visualization", handler: moonVisualizationHandler },
         ]}
       />
-      {setHome? <HomeScreen moonHandler={moonVisualizationHandler}/> : <MoonVisualization/>}
+      {setHome ? (
+        <HomeScreen moonHandler={moonVisualizationHandler} />
+      ) : (
+        <MoonVisualization />
+      )}
     </Flex>
   );
 };
