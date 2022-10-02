@@ -6,14 +6,14 @@ import "../styles/pages/home.css";
 import MoonVisualization from "../screens/MoonVisualization";
 
 const Home = () => {
-  const [CurrentScreen, setCurrentScreen] = useState(HomeScreen);
+  const [setHome, setCurrentHome] = useState(1);
 
   const homeScreenHandler = () => {
-    setCurrentScreen(HomeScreen);
+    setCurrentHome(1);
   };
 
   const moonVisualizationHandler = () => {
-    setCurrentScreen(<MoonVisualization />);
+    setCurrentHome(0);
   };
   return (
     <Flex h={"100vh"} flexDir={"column"}>
@@ -24,7 +24,7 @@ const Home = () => {
           { title: "Moon Visualization", handler: moonVisualizationHandler },
         ]}
       />
-      {CurrentScreen}
+      {setHome? <HomeScreen moonHandler={moonVisualizationHandler}/> : <MoonVisualization/>}
     </Flex>
   );
 };

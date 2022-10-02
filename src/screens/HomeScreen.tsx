@@ -1,7 +1,13 @@
 import { Flex, Box, Heading, Text, Img } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 import "../styles/screens/homescreen.css";
 
-const HomeScreen = () => {
+interface moonProps {
+  moonHandler: () => void;
+}
+
+const HomeScreen = ({ moonHandler }: moonProps) => {
+  const navigator = useNavigate();
   return (
     <Flex
       grow={1}
@@ -10,7 +16,9 @@ const HomeScreen = () => {
       backgroundColor={"#F0F0F0"}
     >
       <Box w={900} textAlign={"start"} p={"3em"}>
-        <Text className="home-title" fontSize={'4xl'}>Moonquake Map</Text>
+        <Text className="home-title" fontSize={"4xl"}>
+          Moonquake Map
+        </Text>
         <Text
           className="home-text"
           fontSize={"2xl"}
@@ -30,7 +38,14 @@ const HomeScreen = () => {
           out more
         </Text>
       </Box>
-      <Box w={550} borderRadius={400} className={"moon-img"}>
+      <Box
+        w={550}
+        borderRadius={400}
+        className={"moon-img"}
+        onClick={() => {
+          moonHandler();
+        }}
+      >
         <Img src="/assets/img/full-moon.png" />
       </Box>
     </Flex>
