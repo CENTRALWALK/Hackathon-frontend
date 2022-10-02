@@ -20,7 +20,7 @@ const Home = () => {
       {/* "Home", "Moon Visualization", "Know More", "Developers" */}
       <Navbar
         itemList={[
-          { title: "home", handler: homeScreenHandler },
+          { title: "Home", handler: homeScreenHandler },
           { title: "Moon Visualization", handler: moonVisualizationHandler },
         ]}
       />
