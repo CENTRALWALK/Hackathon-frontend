@@ -2,22 +2,52 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title>My first three.js app</title>
-  <style>
-    body {
-      margin: 0;
-    }
-  </style>
+	<meta charset="utf-8">
+	<title>My first three.js app</title>
+	<style>
+		body {
+			margin: 0;
+		}
+
+		.container {
+			display: 'flex';
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.selector-flex {
+			padding: 1em;
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+		}
+
+		.moon-block {
+			flex-grow: 1;
+			height: 100%;
+			width: 100%;
+		}
+	</style>
 </head>
 
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.122.0/build/three.min.js"></script>
+	<div class="container">
 
-  <script src="https://cdn.jsdelivr.net/npm/three@0.122.0/examples/js/controls/OrbitControls.min.js"></script>
+		<div>
+			<div class="moon-block" id="moonBlock">
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/three@0.122.0/build/three.min.js"></script>
 
-  <script type="module" src="./3dmoon.js"></script>
-  <script type="x-shader/x-vertex" id="vertexshader">
+	<script src="https://cdn.jsdelivr.net/npm/three@0.122.0/examples/js/controls/OrbitControls.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js"
+		integrity="sha512-WoO4Ih0CDOSLYafy22wZD/mcJ7k0ESLqtQsFa6zFKnEUrbtuGU+GkLtVhgt93xa2qewG5gKEC6CWlN8OaCTSVg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<script type="module" src="./3dmoon.js"></script>
+	<script type="x-shader/x-vertex" id="vertexshader">
 
     attribute float alpha;
 
@@ -37,7 +67,7 @@
 
 </script>
 
-  <script type="x-shader/x-fragment" id="fragmentshader">
+	<script type="x-shader/x-fragment" id="fragmentshader">
 
     uniform vec3 color;
 
