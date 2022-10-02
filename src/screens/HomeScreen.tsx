@@ -26,16 +26,16 @@ const HomeScreen = ({ moonHandler }: moonProps) => {
         >
           Such challenge emerges from Apollo's astronauts seismic instruments
           left behind in missions that collects geophysics data in landing sites
-          on the Moon's surfice. Those instruments were projected to monitor
-          each landing site ambient for at leat one year after the astronauts
+          on the Moon's surface. Those instruments were projected to monitor
+          each landing site ambient for at least one year after the astronauts
           return to earth, while the instruments detect moonquakes and meteorite
-          impacts and send these data back to earth, for analisys. The two
+          impacts and send these data back to earth, for analysis. The two
           different PSE packages are: EASEP (Early Apollo Surface Experiments
           Package), configured by Apollo 11 astronauts, and ALSEP (Apollo Lunar
-          Surface Unidades do Pacote de Experimentos). Therefore, our solution
-          is to develop an app that plots seismic data detecteb by EASEP and
-          ALSEP in an interactive 3d lunar globe. Scroll over the moon to find
-          out more
+          Surface Experiments Packages). Therefore, our solution
+          is to develop an app that plots seismic data detected by EASEP and
+          ALSEP in an interactive 3d lunar globe. Hover over the moon, and click it to find
+          out more.
         </Text>
       </Box>
       <Box
